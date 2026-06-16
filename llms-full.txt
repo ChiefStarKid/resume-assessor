@@ -447,3 +447,10 @@ Are there likely knockout questions this profile would fail? (e.g. "X years in S
 
 One block per candidate. No benefit of the doubt on absent keywords. If it's not on the resume, the ATS doesn't know it exists.
 
+---
+
+## Author
+
+Joseph Solomon · joseph@kainosis.com · https://www.linkedin.com/in/joseph-solomon-376156160/
+
+More tools: https://github.com/ChiefStarKid
