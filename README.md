@@ -197,6 +197,7 @@ reports/                — output directory (gitignored)
 
 ## Questions and feedback
 
+- **Author:** Joseph Solomon · [LinkedIn](https://www.linkedin.com/in/joseph-solomon-376156160/)
 - **General enquiries:** [joseph@kainosis.com](mailto:joseph@kainosis.com)
 - **Bugs and feature requests:** [open an issue](../../issues)
 
