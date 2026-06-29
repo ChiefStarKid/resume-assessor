@@ -195,6 +195,31 @@ reports/                — output directory (gitignored)
 
 ---
 
+---
+
+## Common questions
+
+**What does this pipeline actually do?**
+It reads a resume and a job description, then runs five sequential LLM prompts that simulate how a Talent Consultant would screen the candidate — not how an ATS keyword-matcher would. The output is a structured brief: triage verdict, strongest case for rejection, signal quality calibration, JD fit assessment, and a recruiter-ready candidate brief.
+
+**How is this different from an ATS or keyword scanner?**
+An ATS checks for keyword presence. This pipeline checks for signal quality — whether the evidence behind each claim is credible, whether the metrics carry context, whether the candidate is overselling or underselling. Stage 2 (Signal Quality) explicitly flags both directions. The Reject Gate (Stage 1) is adversarial by design: it builds the strongest honest case for rejection before the rest of the pipeline runs.
+
+**Does it need an API key?**
+No. It uses the  CLI command, which authenticates via your Claude Code session. If you have Claude Code installed and logged in, you are ready.
+
+**What model does it use?**
+ by default. You can override with  for higher-stakes assessments or  for faster batch runs. Multi-model is supported — pass a comma-separated list and the pipeline runs once per model.
+
+**Can I run it against multiple JDs at once?**
+Yes. Use  and it will run the full pipeline against every  file in the directory, saving one report per JD to the output folder.
+
+**Can I adapt the screening criteria?**
+Yes. All stage prompts are in , loaded by section header at runtime. Edit the reject gate criteria, change output fields, or add stages — no code changes needed. The pipeline is designed to be prompt-editable.
+
+**What does the output look like?**
+Each run produces a markdown report with: triage table, reject gate verdict and case, signal quality calibration, JD fit assessment, candidate read hypotheses, and a TC brief stub. A sample report is at [reports/example-assessment.md](reports/example-assessment.md).
+
 ## Questions and feedback
 
 - **Author:** Joseph Solomon · [LinkedIn](https://www.linkedin.com/in/joseph-solomon-376156160/)
